@@ -1,0 +1,28 @@
+{
+  "name": "streams-to-promise",
+  "description": "promises conclusion of multiple streams (readable or writable)",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "https://github.com/JD342/streams-to-promise",
+  "keywords": ["stream", "streams", "race", "all", "promise", "async"],
+  "scripts": {
+    "clean": "rm -r build",
+    "build": "npm run clean && mkdir build && babel -o build/index.js source/index.js",
+    "prepublish": "npm run test && npm run build",
+    "test": "eslint source/index.js && mocha --harmony source/test.js "
+  },
+  "author": "Nicola Fiori (JD342)",
+  "license": "MIT",
+  "dependencies": {
+    "any-promise": "^1.3.0",
+    "stream-to-promise": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0",
+    "eslint": "^3.15.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "timeout-as-promise": "^1.0.0"
+  }
+}
