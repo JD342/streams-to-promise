@@ -80,6 +80,10 @@ gulp.task('mytask', () => {
 });
 ```
 
+## License
+
+  MIT
+
 [license-image]:     https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]:       LICENSE
 [travis-image]:      https://travis-ci.org/JD342/streams-to-promise.svg?branch=master
