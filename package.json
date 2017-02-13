@@ -9,7 +9,7 @@
     "clean": "rm -r build",
     "build": "npm run clean && mkdir build && babel -o build/index.js source/index.js",
     "prepublish": "npm run test && npm run build",
-    "test": "eslint source/index.js && mocha --harmony source/test.js "
+    "test": "eslint source/index.js && mocha --harmony source/test.js"
   },
   "author": "Nicola Fiori (JD342)",
   "license": "MIT",
