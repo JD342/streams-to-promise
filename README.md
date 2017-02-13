@@ -82,13 +82,42 @@ gulp.task('mytask', () => {
 });
 ```
 
+## API
+
+##### `all([s1[, s2[, ...[, sN]]]])`
+
+```js
+var all = require('streams-to-promise');
+var all = require('streams-to-promise').all;
+```
+
+ * `s1`, `s2`, ..., `sN`: [Readable][readable-stream], [Writable][writable-stream], [ReadStream][fs-read-stream], [WriteStream][fs-write-stream] streams
+
+ * returns an [`any-promise`][any-promise] promise (defaults to an [ES6 Promise][es6-promise]) that, once all passed streams have concluded, will resolve an array with all the streamed data of each passed stream.
+
+##### `race([s1[, s2[, ...[, sN]]]])`
+
+```js
+var race = require('streams-to-promise').race;
+```
+
+ * `s1`, `s2`, ..., `sN`: [Readable][readable-stream], [Writable][writable-stream], [ReadStream][fs-read-stream], [WriteStream][fs-write-stream] streams
+
+ * returns an [`any-promise`][any-promise] promise (defaults to an [ES6 Promise][es6-promise]) that will resolve the streamed data of the passed stream that concludes first.
+
 ## License
 
   MIT
 
-[license-image]:     https://img.shields.io/badge/license-MIT-blue.svg
-[license-url]:       LICENSE
-[travis-image]:      https://travis-ci.org/JD342/streams-to-promise.svg?branch=master
-[travis-url]:        https://travis-ci.org/JD342/streams-to-promise
-[npm]:               https://www.npmjs.com/package/streams-to-promise
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: LICENSE
+[travis-image]: https://travis-ci.org/JD342/streams-to-promise.svg?branch=master
+[travis-url]: https://travis-ci.org/JD342/streams-to-promise
+[npm]: https://www.npmjs.com/package/streams-to-promise
 [stream-to-promise]: https://www.npmjs.com/package/stream-to-promise
+[readable-stream]: https://nodejs.org/api/stream.html#stream_class_stream_readable
+[writable-stream]: https://nodejs.org/api/stream.html#stream_class_stream_writable
+[fs-read-stream]: https://nodejs.org/api/fs.html#fs_class_fs_readstream
+[fs-write-stream]: https://nodejs.org/api/fs.html#fs_class_fs_writestream
+[any-promise]: https://www.npmjs.com/package/any-promise
+[es6-promise]: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise
