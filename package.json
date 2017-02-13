@@ -1,7 +1,7 @@
 {
   "name": "streams-to-promise",
   "description": "Promises conclusion of multiple streams (readable or writable)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/index.js",
   "repository": "https://github.com/JD342/streams-to-promise",
   "keywords": ["stream", "streams", "race", "all", "promise", "async"],
