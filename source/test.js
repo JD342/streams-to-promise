@@ -3,7 +3,7 @@
 const { Readable, Writable } = require('stream');
 const expect = require('expect');
 const timeout = require('timeout-as-promise');
-const streamsToPromise = require('./index.js');
+const streamsToPromise = require('../build/index.js');
 
 const { all, race } = streamsToPromise;
 const { entries } = Object;
