@@ -3,7 +3,9 @@
 [![License][license-image]][license-url]
 [![Build status][travis-image]][travis-url]
 
-Based on Ben Drucker's [`stream-to-promise`][stream-to-promise], promises conclusion of multiple streams (readable or writable).
+**Promises conclusion of multiple streams (readable or writable)**
+
+Based on Ben Drucker's [`stream-to-promise`][stream-to-promise], it expands the functionality for multiple streams.
 
 ## Installation
 
